@@ -10,7 +10,7 @@ except IOError:
     README = CHANGES = ''
 
 install_requires = [
-    'pyramid>=1.0',
+    'pyramid>=1.3',
     ]
 
 setup(name='pyramid_versionbadge',

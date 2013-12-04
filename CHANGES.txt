@@ -5,9 +5,17 @@ pyramid_versionbadge
 0.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- add second setting for css class
+
+- enable badge per default
+
+- possibility to set css class
+
+- tests
 
 
 0.1 (2013-12-03)
 ----------------
+
+- initial release
 
