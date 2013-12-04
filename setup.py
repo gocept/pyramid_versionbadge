@@ -14,7 +14,7 @@ install_requires = [
     ]
 
 setup(name='pyramid_versionbadge',
-      version='0.2.dev0',
+      version='0.2',
       description=('A tween which renders a badge on '
                    'the page indicating the version.'),
       long_description=README + '\n\n' + CHANGES,

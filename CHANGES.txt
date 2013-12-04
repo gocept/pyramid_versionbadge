@@ -2,7 +2,7 @@ pyramid_versionbadge
 ====================
 
 
-0.2 (unreleased)
+0.2 (2013-12-04)
 ----------------
 
 - add second setting for css class
