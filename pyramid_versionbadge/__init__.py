@@ -7,14 +7,15 @@ class Tween(object):
 
     def __call__(self, request):
         response = self.handler(request)
-        if self.text != '' and (response.content_type and
-                response.content_type.lower() in ['text/html',
-                                                  'text/xml']):
+        if self.text != '' and (
+                response.content_type and
+                response.content_type.lower() in ['text/html', 'text/xml']):
             result = response.body
-            result = result.replace('</body>',
-                   '<div id="versionbadge" class="{}">{}</div></body>'.format(
-                   self.css, self.text))
-            response.body = ''
+            result = result.replace(
+                b'</body>',
+                '<div id="versionbadge" class="{}">{}</div></body>'.format(
+                    self.css, self.text).encode())
+            response.body = b''
             response.write(result)
             return response
         return response
