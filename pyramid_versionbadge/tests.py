@@ -10,7 +10,7 @@ BODY = '<html><head></head><body></body></html>'
 def view(request):
     response = request.response
     response.content_type = 'text/html'
-    response.body = BODY
+    response.text = BODY
     return response
 
 
@@ -60,7 +60,7 @@ class TestTweenDeactivate(Base):
 
     def test_badge_with_text_set_to_emtpy_string_is_not_rendered(self):
         resp = self.app.get('/')
-        assert resp.body == BODY
+        assert resp.text == BODY
 
     def tearDown(self):
         testing.tearDown()
